@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { MapPin, Phone, Clock, Navigation } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import clinicFacade from "@/assets/clinic-facade.jpg";
+import clinicFacadeDesktop from "@/assets/clinic-facade.jpg";
+import clinicFacadeMobile from "@/assets/clinic-facade-mobile.jpg";
+import ResponsiveImage from "@/components/clinic/ResponsiveImage";
 
 const Location = () => {
   return (
@@ -23,7 +25,6 @@ const Location = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-8 items-stretch">
-          {/* Map */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -43,7 +44,6 @@ const Location = () => {
             />
           </motion.div>
 
-          {/* Info */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -52,9 +52,10 @@ const Location = () => {
             className="flex flex-col"
           >
             <div className="rounded-lg overflow-hidden shadow-md mb-6">
-              <img
-                src={clinicFacade}
-                alt="Fachada da Clínica Bella Vita"
+              <ResponsiveImage
+                desktopSrc={clinicFacadeDesktop}
+                mobileSrc={clinicFacadeMobile}
+                alt="Fachada da Clínica"
                 className="w-full h-56 object-cover"
               />
             </div>

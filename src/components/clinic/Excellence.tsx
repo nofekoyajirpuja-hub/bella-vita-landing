@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { BookOpen, FlaskConical, Award, Clock, HeadphonesIcon } from "lucide-react";
-import clinicTeam from "@/assets/clinic-team.jpg";
+import clinicTeamDesktop from "@/assets/clinic-team.jpg";
+import clinicTeamMobile from "@/assets/clinic-team-mobile.jpg";
+import ResponsiveImage from "@/components/clinic/ResponsiveImage";
 
 const differentials = [
   { icon: BookOpen, label: "Cursos online e mentorias individuais" },
@@ -21,8 +23,9 @@ const Excellence = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <img
-              src={clinicTeam}
+            <ResponsiveImage
+              desktopSrc={clinicTeamDesktop}
+              mobileSrc={clinicTeamMobile}
               alt="Treinamento no Instituto Dra. Léia Demétrio"
               className="rounded-lg shadow-lg w-full h-auto object-cover"
             />
