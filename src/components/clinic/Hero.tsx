@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, CheckCircle } from "lucide-react";
-import heroImage from "@/assets/hero-clinic.jpg";
+import heroDesktop from "@/assets/hero-clinic.jpg";
+import heroMobile from "@/assets/hero-mobile.jpg";
+import ResponsiveImage from "@/components/clinic/ResponsiveImage";
 
 const trustItems = [
   "Formação especializada",
@@ -14,7 +16,12 @@ const Hero = () => {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0">
-        <img src={heroImage} alt="Instituto Dra. Léia Demétrio" className="w-full h-full object-cover" />
+        <ResponsiveImage
+          desktopSrc={heroDesktop}
+          mobileSrc={heroMobile}
+          alt="Instituto Dra. Léia Demétrio"
+          className="w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/50 to-transparent" />
       </div>
 
