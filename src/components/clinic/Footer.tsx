@@ -1,36 +1,37 @@
-import { Sparkles, Phone, MapPin, Clock, Instagram, Facebook } from "lucide-react";
+import { GraduationCap, Phone, MapPin, Clock, Instagram, Facebook } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer id="contato" className="bg-foreground text-primary-foreground/80 pt-16 pb-8">
+    <footer className="bg-foreground text-primary-foreground/80 pt-16 pb-8">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-          {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Sparkles className="h-6 w-6 text-primary" />
-              <span className="font-heading text-xl font-bold text-primary-foreground">Bella Vita</span>
+              <GraduationCap className="h-6 w-6 text-primary" />
+              <span className="font-heading text-xl font-bold text-primary-foreground">Instituto Dra. Léia Demétrio</span>
             </div>
             <p className="text-sm leading-relaxed text-primary-foreground/60">
-              Realçando sua beleza com naturalidade. Estética avançada em Florianópolis.
+              Capacitação em harmonização facial com metodologia estruturada e prática clínica intensiva.
             </p>
           </div>
 
-          {/* Links */}
           <div>
             <h4 className="font-heading text-lg font-semibold text-primary-foreground mb-4">Links Rápidos</h4>
             <ul className="space-y-2 text-sm">
-              {["Início", "Procedimentos", "Sobre", "Resultados", "Avaliações"].map((l) => (
-                <li key={l}>
-                  <a href={`#${l.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")}`} className="hover:text-primary transition-colors">
-                    {l}
-                  </a>
+              {[
+                { label: "Início", href: "#inicio" },
+                { label: "Sobre", href: "#sobre" },
+                { label: "Modelos de Ensino", href: "#ensino" },
+                { label: "Resultados", href: "#resultados" },
+                { label: "Depoimentos", href: "#depoimentos" },
+              ].map((l) => (
+                <li key={l.href}>
+                  <a href={l.href} className="hover:text-primary transition-colors">{l.label}</a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h4 className="font-heading text-lg font-semibold text-primary-foreground mb-4">Contato</h4>
             <ul className="space-y-3 text-sm">
@@ -45,13 +46,12 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Address */}
           <div>
             <h4 className="font-heading text-lg font-semibold text-primary-foreground mb-4">Localização</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                <span>Av. Beira Mar Norte, 1500 - Sala 302, Florianópolis - SC</span>
+                <span>Florianópolis - SC</span>
               </li>
               <li className="flex items-start gap-2">
                 <Clock className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
@@ -70,7 +70,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/10 pt-6 text-center text-xs text-primary-foreground/40">
-          © 2026 Bella Vita Estética Avançada. Todos os direitos reservados.
+          © 2026 Instituto Dra. Léia Demétrio. Todos os direitos reservados.
         </div>
       </div>
     </footer>

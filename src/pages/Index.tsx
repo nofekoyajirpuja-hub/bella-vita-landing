@@ -1,11 +1,11 @@
 import Header from "@/components/clinic/Header";
 import Hero from "@/components/clinic/Hero";
-import Location from "@/components/clinic/Location";
-import Procedures from "@/components/clinic/Procedures";
+import Excellence from "@/components/clinic/Excellence";
+import TeachingModels from "@/components/clinic/TeachingModels";
 import Results from "@/components/clinic/Results";
-import About from "@/components/clinic/About";
 import Reviews from "@/components/clinic/Reviews";
 import CTASection from "@/components/clinic/CTASection";
+import ContactForm from "@/components/clinic/ContactForm";
 import Footer from "@/components/clinic/Footer";
 
 const Index = () => {
@@ -13,12 +13,12 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <Hero />
-      <Location />
-      <Procedures />
-      <About />
+      <Excellence />
+      <TeachingModels />
       <Results />
       <Reviews />
       <CTASection />
+      <ContactForm />
       <Footer />
     </div>
   );

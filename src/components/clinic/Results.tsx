@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
 
 const results = [
-  { procedure: "Preenchimento Labial", before: "Lábios finos e assimétricos", after: "Volume natural e harmonioso" },
-  { procedure: "Harmonização Facial", before: "Contorno facial irregular", after: "Simetria e equilíbrio" },
-  { procedure: "Botox", before: "Linhas de expressão marcadas", after: "Pele lisa e rejuvenescida" },
+  { procedure: "Preenchimento Labial", before: "Técnica básica sem supervisão", after: "Domínio completo com resultados naturais" },
+  { procedure: "Harmonização Facial", before: "Insegurança no planejamento clínico", after: "Raciocínio clínico estruturado" },
+  { procedure: "Rinomodelação", before: "Sem experiência prática", after: "Execução segura e precisa" },
 ];
 
 const Results = () => {
   return (
-    <section id="resultados" className="py-20 bg-secondary">
+    <section id="resultados" className="py-20 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -21,7 +21,7 @@ const Results = () => {
             Resultados Reais
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Transformações que falam por si — resultados naturais e sofisticados
+            A evolução dos nossos alunos fala por si
           </p>
         </motion.div>
 

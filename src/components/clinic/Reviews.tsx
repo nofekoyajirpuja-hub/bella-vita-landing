@@ -2,15 +2,15 @@ import { motion } from "framer-motion";
 import { Star, Award } from "lucide-react";
 
 const reviews = [
-  { name: "Camila Ferreira", text: "Fiz preenchimento e ficou super natural. Atendimento impecável!" },
-  { name: "Juliana Costa", text: "Ambiente incrível e profissionais extremamente qualificados. Recomendo demais!" },
-  { name: "Mariana Santos", text: "O botox ficou maravilhoso, ninguém percebeu, só elogiaram minha pele. Amei!" },
-  { name: "Renata Oliveira", text: "A harmonização facial mudou minha autoestima. Resultado natural e lindo!" },
+  { name: "Dra. Camila Ferreira", text: "A mentoria individual transformou minha prática clínica. Hoje atendo com total segurança e confiança!" },
+  { name: "Dra. Juliana Costa", text: "O workshop hands on foi incrível! Prática intensiva com supervisão de altíssima qualidade." },
+  { name: "Dra. Mariana Santos", text: "Os cursos online são completos e didáticos. Consegui conciliar com minha rotina e evoluí muito." },
+  { name: "Dr. Rafael Oliveira", text: "Metodologia estruturada e suporte individualizado. O Instituto realmente faz diferença na carreira." },
 ];
 
 const Reviews = () => {
   return (
-    <section id="avaliacoes" className="py-20 bg-secondary">
+    <section id="depoimentos" className="py-20 bg-secondary">
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -20,10 +20,10 @@ const Reviews = () => {
           className="text-center mb-14"
         >
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Avaliações
+            Depoimentos
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            O que nossas pacientes dizem sobre a experiência na Bella Vita
+            O que nossos alunos dizem sobre a experiência no Instituto
           </p>
         </motion.div>
 
@@ -47,7 +47,7 @@ const Reviews = () => {
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary font-heading font-bold text-sm">
-                  {review.name.charAt(0)}
+                  {review.name.replace("Dra. ", "").replace("Dr. ", "").charAt(0)}
                 </div>
                 <span className="text-sm font-medium text-foreground">{review.name}</span>
               </div>
@@ -63,7 +63,7 @@ const Reviews = () => {
         >
           <Award className="h-6 w-6 text-gold" />
           <span className="font-heading text-xl font-semibold text-foreground">
-            Mais de 2.000 procedimentos realizados
+            Mais de 500 profissionais capacitados
           </span>
         </motion.div>
       </div>
